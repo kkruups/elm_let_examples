@@ -16,6 +16,10 @@ main =
         ]
 
 
+
+-- style attribute helper
+
+
 (=>) =
     (,)
 
@@ -23,13 +27,6 @@ main =
 
 -- Note ¥ not supported as backslash in atom
 -- Use alt-¥ for \
-
-
-test =
-    (\x y -> x + y)
-
-
-
 -- type alias Count =
 --      { count: Int }
 -- debug.log "divComp: "
