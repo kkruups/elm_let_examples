@@ -33,14 +33,11 @@ main =
 --      { count: Int }
 -- debug.log "divComp: "
 --view : List ( String, String, String ) -> Html msg
-
-
-view : List ( String, String, String ) -> Html msg
-
-
-
+-- =====================================================================
+--       Alternate view
 --  Written either as a function or using lambda notation work without issue
 -- However Atom Dev editor does not support japanese ¥ as backslash character
+-- =====================================================================
 {--
 view tuple =
     let
@@ -59,6 +56,7 @@ view tuple =
 --}
 
 
+view : List ( String, String, String ) -> Html msg
 view tuple =
     let
         {--div Html Component helper function
