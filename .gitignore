@@ -1,0 +1,5 @@
+# files to ignore
+**/elm-stuff
+elm-stuff
+node_modules
+.gitignore
