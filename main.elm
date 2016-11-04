@@ -5,6 +5,7 @@ import Html.Attributes exposing (style)
 import List
 
 
+main : Html a
 main =
     view
         [ ( "red", "white", "super" )
@@ -20,6 +21,7 @@ main =
 -- style attribute helper
 
 
+(=>) : a -> b -> ( a, b )
 (=>) =
     (,)
 
