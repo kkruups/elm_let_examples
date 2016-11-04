@@ -59,16 +59,40 @@ view tuple =
 
 view tuple =
     let
+        {--div Html Component helper function
+            Args:
+                  @bkgndcolor   background-color  style attribute
+                  @txtcolor     color             style attribute
+                  @divtxt       text              text to be viewed
+            Returns:
+                  Html msg
+        --}
         divComp =
-            (\( bkgndcolor, txtcolor, newtxt ) ->
+            (\( bkgndcolor, txtcolor, divtxt ) ->
                 div
                     [ style
                         [ Debug.log "style:bkgndcolor: " ("background-color" => bkgndcolor)
                         , Debug.log "style:color" ("color" => txtcolor)
                         ]
                     ]
-                    [ Html.text <| Debug.log "style:text :" newtxt ]
+                    [ Html.text <| Debug.log "style:text :" divtxt ]
             )
     in
         div [ style [ "padding" => "20px", "text-align" => "center" ] ]
             (List.map divComp (Debug.log "tuple list: " tuple))
+
+
+
+{-
+    Outputs:
+
+    <div style="padding: 20px; text-align: center;">
+        <div style="background-color: red; color: white;">super</div>
+        <div style="background-color: dodgerblue; color: black;">soup</div>
+        <div style="background-color: purple; color: yellow;">happy trails</div>
+        <div style="background-color: yellow; color: brown;">daruma</div>
+        <div style="background-color: black; color: white;">b/w</div>
+        <div style="background-color: beige; color: brown;">banana</div>
+   </div>
+
+-}
